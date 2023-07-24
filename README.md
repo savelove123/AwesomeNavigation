@@ -1,5 +1,5 @@
-# AwesomeNavigation 基于依赖注入的Android导航页面
- 
+# AwesomeNavigation
+ 基于依赖注入的Android导航页面
 
 相关文章：http://t.csdn.cn/AMgGT
 
@@ -28,7 +28,8 @@
 ### 声明导航节点
 
 
-```interface AuthDestination:ScreenDestination{
+```kotin
+interface AuthDestination:ScreenDestination{
 
     @Parcelize
     data class Params(private val authType:AuthType, val phone:String?=null):Parcelable{
@@ -40,35 +41,43 @@
             }
         }
     }
-}```
+}
+```
 
 ### 实现导航节点
 
-```class AuthDestinationImpl: AuthDestination{
+```kotlin
+class AuthDestinationImpl: AuthDestination{
     override fun toScreen( params: Parcelable?, navigable: Navigable): Screen {
         return Intent(navigable.toContext(), AuthActivity::class.java)
     }
-}```
+}
+```
 
 ###声明导航组件
 
-```@HiltViewModel
-class SomeViewModel @Inject constructor( authDesitination:AuthDesination ):NavViewModel<AuthDesination>( application = application )```
+```kotlin
+@HiltViewModel
+class SomeViewModel @Inject constructor( authDesitination:AuthDesination ):NavViewModel<AuthDesination>( application = application )
+```
 
 ###执行导航
-`` authDesitination.injectParams( AuthDestination.Params( AuthType.Login ) )``
+`authDesitination.injectParams( AuthDestination.Params( AuthType.Login ) )`
 
 ###在目标页面注入参数
-``` @AndroidEntryPoint
+```kotlin
+ @AndroidEntryPoint
 class AuthActivity: BaseActivity<ActivityAuthBinding,AuthViewModel>() ,Navigable{
 
     private val authViewModel :AuthViewModel by lazyNavViewModel {
         observeNavigation()
         injectVMParams(requireNavParam())
-    }```
+    }
+```
 
 ###ViewModel获取导航参数
-```@HiltViewModel
+```kotlin
+@HiltViewModel
 class AuthViewModel @Inject constructor( userInfoDestination:UseInfoDestination ):NavViewModel<AuthNextDestination>( application = application ),Parameterized<AuthDestination.Params>{
 
     fun attachViewModel( saveInstanceState:Bundle? ){
@@ -76,7 +85,8 @@ class AuthViewModel @Inject constructor( userInfoDestination:UseInfoDestination 
             userInfoDestination.navigate()
         }
     }
-}```
+}
+```
 
 
 
