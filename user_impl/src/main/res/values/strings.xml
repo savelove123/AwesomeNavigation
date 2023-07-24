@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="user_change_phone_title">修改手机号</string>
+    <string name="user_change_phone_hint">请输入新的手机号</string>
+    <string name="user_change_password">设置密码</string>
+    <string name="user_change_password_hint">请输入要设置的密码</string>
+
+    <string name="user_set_user_info">设置用户信息</string>
+    <string name="user_set_user_info_email">请输入邮件地址</string>
+    <string name="user_set_user_info_name">请输入昵称</string>
+
+    <string name="user_user_info">用户信息</string>
+    <string name="user_user_info_logout">退出登录</string>
+
+    <string name="user_privacy_title">用户协议</string>
+    <string name="user_privacy_content">点击同意继续，拒绝将退出</string>
+    <string name="user_privacy_accept">接受</string>
+    <string name="user_privacy_reject">拒绝</string>
+
+
+</resources>

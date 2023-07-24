@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_title_height"
+    android:background="@color/activity_background"
+    >
+
+    <ImageView
+        android:id="@+id/back_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_common_arrow_back"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/common_title_back"
+        android:layout_marginLeft="@dimen/common_space_line_ver_medium"
+        android:textColor="@color/common_black"
+        android:textSize="18sp"
+        tools:text="@tools:sample/full_names"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/right_image"
+        android:contentDescription="@string/common_title_right_text_description"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:padding="8dp"
+        tools:visibility="gone" />
+
+    <View
+        android:id="@+id/navigation_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_divider_color" />
+
+</RelativeLayout>

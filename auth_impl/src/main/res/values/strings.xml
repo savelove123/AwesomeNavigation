@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="auth_activity_phone_hint">请输入11位手机手机号码</string>
+    <string name="auth_activity_verify_code_hint">请输入4位验证码</string>
+</resources>

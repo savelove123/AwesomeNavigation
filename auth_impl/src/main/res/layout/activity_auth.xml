@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.felix.android.auth.vm.AuthViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.felix.android.common.view.CommonHeader
+            android:id="@+id/title"
+            app:ch_title="请先登录"
+            app:ch_title_color="@color/common_black"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_title_height"/>
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_marginTop="@dimen/common_space_line_ver_medium"
+            android:layout_marginStart="@dimen/common_space_line_ver_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/auth_activity_phone_hint"
+            android:inputType="phone"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="16sp"
+            app:addTextChangedListener="@{vm.observePhone()}"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_marginTop="@dimen/common_space_line_ver_medium"
+            android:layout_marginStart="@dimen/common_space_line_ver_medium"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/auth_activity_verify_code_hint"
+            android:inputType="numberDecimal"
+            android:maxEms="4"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="16sp"
+            android:imeOptions="actionDone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_phone"
+            app:addTextChangedListener="@{vm.observeVerifyCode()}"
+            app:addActionDoneListener="@{vm.verify()}"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

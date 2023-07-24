@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="vm"
+            type="com.felix.android.user.vm.PrivacyViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.felix.android.common.view.CommonHeader
+        android:id="@+id/title_bar"
+        app:ch_title="@string/user_privacy_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_title_height"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:text="@string/user_privacy_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/accept"
+        android:text="@string/user_privacy_accept"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="@dimen/common_space_line_ver_medium"
+        app:layout_constraintEnd_toStartOf="@id/reject"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:is_visible="@{vm.showConfirm}"
+        android:onClick="@{()->vm.accept()}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/reject"
+        android:text="@string/user_privacy_reject"
+        app:layout_constraintStart_toEndOf="@id/accept"
+        android:layout_marginStart="@dimen/common_space_line_ver_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:is_visible="@{vm.showConfirm}"
+        android:onClick="@{()->vm.reject()}"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

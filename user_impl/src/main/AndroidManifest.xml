@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name="com.felix.android.user.ui.ChangePhoneActivity"
+            android:theme="@style/DefaultActivityTheme"
+            android:launchMode="singleTask"/>
+        <activity android:name="com.felix.android.user.ui.SetPasswordActivity"
+            android:theme="@style/DefaultActivityTheme"
+            android:launchMode="singleTask"/>
+        <activity android:name="com.felix.android.user.ui.UserInfoActivity"
+            android:theme="@style/DefaultActivityTheme"
+            android:launchMode="singleTask"/>
+        <activity android:name="com.felix.android.user.ui.SetUserInfoActivity"
+            android:theme="@style/DefaultActivityTheme"
+            android:launchMode="singleTask"/>
+        <activity android:name="com.felix.android.user.ui.PrivacyActivity"
+            android:theme="@style/DefaultActivityTheme"
+            android:launchMode="singleTask"/>
+    </application>
+</manifest>

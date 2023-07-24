@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonHeader">
+        <attr name="ch_title" format="string" />
+        <attr name="ch_show_line" format="boolean" />
+        <attr name="ch_background" format="reference" />
+        <attr name="ch_back_icon" format="reference" />
+        <attr name="ch_title_color" format="color|reference" />
+        <!--右边icon-->
+        <attr name="ch_right_icon" format="reference" />
+        <!--是否展示右边icon-->
+        <attr name="ch_show_right_icon" format="boolean" />
+    </declare-styleable>
+</resources>
