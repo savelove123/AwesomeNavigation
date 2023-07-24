@@ -61,10 +61,12 @@ class AuthDestinationImpl: AuthDestination{
 class SomeViewModel @Inject constructor( authDesitination:AuthDesination ):NavViewModel<AuthDesination>( application = application )
 ```
 
-###执行导航
-`authDesitination.injectParams( AuthDestination.Params( AuthType.Login ) )`
+### 执行导航
+```
+authDesitination.injectParams( AuthDestination.Params( AuthType.Login ) )
+```
 
-###在目标页面注入参数
+### 在目标页面注入参数
 ```kotlin
  @AndroidEntryPoint
 class AuthActivity: BaseActivity<ActivityAuthBinding,AuthViewModel>() ,Navigable{
@@ -75,7 +77,7 @@ class AuthActivity: BaseActivity<ActivityAuthBinding,AuthViewModel>() ,Navigable
     }
 ```
 
-###ViewModel获取导航参数
+### ViewModel获取导航参数
 ```kotlin
 @HiltViewModel
 class AuthViewModel @Inject constructor( userInfoDestination:UseInfoDestination ):NavViewModel<AuthNextDestination>( application = application ),Parameterized<AuthDestination.Params>{
