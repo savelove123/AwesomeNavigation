@@ -1,5 +1,8 @@
 # AwesomeNavigation
- 基于依赖注入的Android导航页面
+ 基于依赖注入的Android导航页面框架
+ - 支持跨模块
+ - kotlin实现
+ - 依赖Hilt
 
 相关文章：http://t.csdn.cn/AMgGT
 
