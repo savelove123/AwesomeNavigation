@@ -54,7 +54,7 @@ class AuthDestinationImpl: AuthDestination{
 }
 ```
 
-###声明导航组件
+### 声明导航组件
 
 ```kotlin
 @HiltViewModel
