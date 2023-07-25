@@ -6,6 +6,12 @@
 
 相关文章：http://t.csdn.cn/AMgGT
 
+### gradle配置
+
+```
+    implementation 'com.github.savelove123:navigation_lib:0.0.3'
+```
+
 # 导航框架功能定义 
 
 - 支持每个功能组件导航的时候不直接依赖其他功能组件的具体实现
