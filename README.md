@@ -2,9 +2,10 @@
  基于依赖注入的Android导航页面框架
  - 支持跨模块
  - kotlin实现
- - 依赖Hilt
+
 
 相关文章：http://t.csdn.cn/AMgGT
+库源码工程：https://github.com/savelove123/navigation_lib
 
 ### gradle配置
 
