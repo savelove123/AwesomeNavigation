@@ -35,7 +35,7 @@ android {
 
 dependencies {
     implementation project(':common')
-    implementation project(':navigation')
+    implementation 'com.github.savelove123:navigation_lib:0.0.3'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
     implementation "androidx.fragment:fragment-ktx:1.6.0"
 

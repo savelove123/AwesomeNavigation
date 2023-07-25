@@ -16,7 +16,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "AwesomeNavigation"
 include ':app'
-include ':navigation'
 include ':auth'
 include ':user'
 include ':common'

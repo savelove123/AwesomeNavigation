@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.felix.android.base.NavViewModel
+import com.felix.android.navigation.NavViewModel
 import com.felix.android.navigation.Parameterized
 import com.felix.android.navigation.auth.AuthDestination
 import com.felix.android.navigation.auth.AuthRepository
@@ -41,7 +41,7 @@ class UserInfoViewModel @Inject constructor(
 
 
     override fun attachViewModel(savedInstanceState: Bundle?) {
-        super.attachViewModel(savedInstanceState)
+
 
         if( !requireVMParams().requireFragment ){
             userInfoDestination

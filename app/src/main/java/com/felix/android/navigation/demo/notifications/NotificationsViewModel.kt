@@ -3,9 +3,7 @@ package com.felix.android.navigation.demo.notifications
 import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.felix.android.base.NavViewModel
-import com.felix.android.navigation.demo.user.SetUserInfoDestination
+import com.felix.android.navigation.NavViewModel
 import com.felix.android.navigation.demo.user.UserInfoDestination
 import com.felix.android.navigation.destination.NavDestination
 import com.felix.android.navigation.destination.injectParams

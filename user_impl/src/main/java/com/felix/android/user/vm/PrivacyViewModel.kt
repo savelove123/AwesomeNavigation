@@ -1,8 +1,9 @@
 package com.felix.android.user.vm
 
 import android.app.Application
+import android.os.Bundle
 import androidx.lifecycle.MutableLiveData
-import com.felix.android.base.NavViewModel
+import com.felix.android.navigation.NavViewModel
 import com.felix.android.navigation.Parameterized
 import com.felix.android.navigation.demo.user.PrivacyDestination
 import com.felix.android.navigation.demo.user.UserRepository
@@ -14,7 +15,7 @@ import javax.inject.Inject
 class PrivacyViewModel @Inject constructor(
     application: Application,
     private val userRepository: UserRepository
-    ):NavViewModel<NavDestination>( application ), Parameterized<PrivacyDestination.Params> {
+    ): NavViewModel<NavDestination>( application ), Parameterized<PrivacyDestination.Params> {
 
 
 
@@ -30,6 +31,10 @@ class PrivacyViewModel @Inject constructor(
     fun reject(){
         userRepository.acceptPrivacy(false)
         finish( PrivacyDestination.Results(false) )
+    }
+
+    override fun attachViewModel(savedInstanceState: Bundle?) {
+
     }
 
 }

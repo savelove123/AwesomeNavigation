@@ -1,7 +1,7 @@
 package com.felix.android.user.ui
 
 import com.felix.android.base.BaseActivity
-import com.felix.android.base.lazyNavViewModel
+import com.felix.android.navigation.lazyNavViewModel
 import com.felix.android.navigation.Navigable
 import com.felix.android.navigation.ext.requireNavParam
 import com.felix.android.user.impl.R

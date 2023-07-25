@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-import com.felix.android.base.lazyNavViewModel
+import com.felix.android.navigation.lazyNavViewModel
 import com.felix.android.navigation.Navigable
 import com.felix.android.navigation.demo.databinding.FragmentNotificationsBinding
 import dagger.hilt.android.AndroidEntryPoint

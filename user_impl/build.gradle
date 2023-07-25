@@ -41,7 +41,7 @@ dependencies {
 
     implementation project(':common')
     implementation project(':base')
-    implementation project(':navigation')
+    implementation 'com.github.savelove123:navigation_lib:0.0.3'
     implementation project(':user')
     implementation project(':auth')
     implementation project(':home')

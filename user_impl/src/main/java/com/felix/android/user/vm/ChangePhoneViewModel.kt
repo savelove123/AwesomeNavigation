@@ -1,9 +1,10 @@
 package com.felix.android.user.vm
 
 import android.app.Application
+import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
-import com.felix.android.base.NavViewModel
+import com.felix.android.navigation.NavViewModel
 import com.felix.android.common.createActionDoneListener
 import com.felix.android.common.createTextWatcher
 import com.felix.android.navigation.Parameterized
@@ -17,7 +18,7 @@ import javax.inject.Inject
 class ChangePhoneViewModel @Inject constructor(
     application: Application,
     private val authRepository: AuthRepository
-):NavViewModel<NavDestination>(application),Parameterized<ChangePhoneDestination.Params> {
+): NavViewModel<NavDestination>(application),Parameterized<ChangePhoneDestination.Params> {
 
      val phone = MutableLiveData("")
 
@@ -37,6 +38,10 @@ class ChangePhoneViewModel @Inject constructor(
         //修改手机号会改变authState中的手机号
         authRepository.setAuthState(authRepository.authState().value.copy( phoneNumber = phone.value ))
         navigateBack()
+    }
+
+    override fun attachViewModel(savedInstanceState: Bundle?) {
+
     }
 
 }

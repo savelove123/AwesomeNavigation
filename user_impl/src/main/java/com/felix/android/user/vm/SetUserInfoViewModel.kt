@@ -3,11 +3,9 @@ package com.felix.android.user.vm
 import android.app.Application
 import android.os.Bundle
 import android.widget.Toast
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.distinctUntilChanged
 import androidx.lifecycle.viewModelScope
-import com.felix.android.base.NavViewModel
+import com.felix.android.navigation.NavViewModel
 import com.felix.android.common.createTextWatcher
 import com.felix.android.home.HomeDestination
 import com.felix.android.navigation.auth.AuthRepository
@@ -23,7 +21,7 @@ class SetUserInfoViewModel @Inject constructor(
     private val homeDestination: HomeDestination,
     private val userRepository: UserRepository,
     private val authRepository: AuthRepository
-    ) :NavViewModel<HomeDestination>(application) {
+    ) : NavViewModel<HomeDestination>(application) {
 
     val name = MutableLiveData("")
 
@@ -38,7 +36,7 @@ class SetUserInfoViewModel @Inject constructor(
     }
 
     override fun attachViewModel(savedInstanceState: Bundle?) {
-        super.attachViewModel(savedInstanceState)
+
     }
 
     fun saveUserInfo(){

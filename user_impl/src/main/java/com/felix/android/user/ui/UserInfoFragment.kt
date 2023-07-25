@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.felix.android.base.lazyNavViewModel
+import com.felix.android.navigation.lazyNavViewModel
 import com.felix.android.navigation.Navigable
 import com.felix.android.navigation.ext.requireNavParam
 import com.felix.android.user.impl.R

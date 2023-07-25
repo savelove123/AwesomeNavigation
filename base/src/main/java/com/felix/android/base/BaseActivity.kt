@@ -7,9 +7,11 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
+import com.felix.android.navigation.NavViewModel
 
-abstract class BaseActivity<V : ViewDataBinding, M : BaseVM> : AppCompatActivity(){
+abstract class BaseActivity<V : ViewDataBinding, M : NavViewModel<*>> : AppCompatActivity(){
 
     protected lateinit var viewDataBinding: V
     protected lateinit var viewModel: M

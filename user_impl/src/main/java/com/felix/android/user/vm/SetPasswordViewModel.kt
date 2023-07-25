@@ -1,9 +1,10 @@
 package com.felix.android.user.vm
 
 import android.app.Application
+import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
-import com.felix.android.base.NavViewModel
+import com.felix.android.navigation.NavViewModel
 import com.felix.android.common.createActionDoneListener
 import com.felix.android.common.createTextWatcher
 import com.felix.android.navigation.Parameterized
@@ -15,7 +16,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SetPasswordViewModel @Inject constructor(
     application: Application
-):NavViewModel<NavDestination>(application = application),Parameterized<SetPasswordDestination.Params> {
+): NavViewModel<NavDestination>(application = application),Parameterized<SetPasswordDestination.Params> {
 
 
     val password = MutableLiveData("")
@@ -34,6 +35,10 @@ class SetPasswordViewModel @Inject constructor(
             return@createActionDoneListener
         }
         navigateBack()
+    }
+
+    override fun attachViewModel(savedInstanceState: Bundle?) {
+
     }
 
 }

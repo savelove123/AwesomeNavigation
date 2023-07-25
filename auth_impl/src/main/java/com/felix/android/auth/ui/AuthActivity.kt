@@ -7,11 +7,11 @@ import com.felix.android.auth.impl.BR
 import com.felix.android.auth.impl.databinding.ActivityAuthBinding
 import com.felix.android.auth.vm.AuthViewModel
 import com.felix.android.base.BaseActivity
-import com.felix.android.base.lazyNavViewModel
 import com.felix.android.navigation.Navigable
 import com.felix.android.navigation.auth.AuthDestination
 import com.felix.android.navigation.auth.AuthType
 import com.felix.android.navigation.ext.requireNavParam
+import com.felix.android.navigation.lazyNavViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

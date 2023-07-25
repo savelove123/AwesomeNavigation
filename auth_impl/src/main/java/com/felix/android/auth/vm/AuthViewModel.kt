@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.felix.android.base.NavViewModel
+import com.felix.android.navigation.NavViewModel
 import com.felix.android.common.createActionDoneListener
 import com.felix.android.common.createTextWatcher
 import com.felix.android.home.HomeDestination
@@ -15,7 +15,6 @@ import com.felix.android.navigation.auth.AuthDestination
 import com.felix.android.navigation.auth.AuthRepository
 import com.felix.android.navigation.auth.AuthType
 import com.felix.android.navigation.auth.model.AuthResult
-import com.felix.android.navigation.demo.user.ChangePhoneDestination
 import com.felix.android.navigation.demo.user.PrivacyDestination
 import com.felix.android.navigation.demo.user.SetPasswordDestination
 import com.felix.android.navigation.demo.user.SetUserInfoDestination
@@ -36,14 +35,13 @@ class AuthViewModel @Inject constructor(
     val setUserInfoDestination: SetUserInfoDestination,
     val privacyDestination: PrivacyDestination,
     val homeDestination: HomeDestination
-    ):NavViewModel<AuthNextDestination>( application = application ),Parameterized<AuthDestination.Params>{
+    ): NavViewModel<AuthNextDestination>( application = application ),Parameterized<AuthDestination.Params>{
 
 
     val phone = MutableLiveData("")
     val verifyCode = MutableLiveData("")
 
     override fun attachViewModel(savedInstanceState: Bundle?) {
-        super.attachViewModel(savedInstanceState)
 
         if( requireVMParams().type == AuthType.Register ){
             viewModelScope.launch {

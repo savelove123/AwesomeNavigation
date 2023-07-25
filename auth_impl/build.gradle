@@ -42,7 +42,7 @@ dependencies {
     implementation project(':auth')
     implementation project(':common')
     implementation project(':base')
-    implementation project(':navigation')
+    implementation 'com.github.savelove123:navigation_lib:0.0.3'
     implementation project(':user')
     implementation project(':home')
     implementation "com.google.dagger:hilt-android:2.44.2"
