@@ -8,6 +8,19 @@
 
 ### gradle配置
 
+请在根目录的build.gradle或者settings.gradle 加入 `maven { url "https://jitpack.io"}`
+
+如下：
+```
+repositories {
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url "https://jitpack.io" }
+        google()
+        mavenCentral()
+    }
+```
+
+然后再在依赖的工程加入：
 ```
     implementation 'com.github.savelove123:navigation_lib:0.0.3'
 ```
